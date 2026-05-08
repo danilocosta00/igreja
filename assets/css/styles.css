@@ -1,5 +1,70 @@
+:root {
+    /* Cores principais */
+    --primary: #2d5b8c;
+    --primary-light: #4a7bb0;
+    --primary-dark: #1e3e63;
+
+    /* Destaques */
+    --secondary: #d4a373;
+    --secondary-light: #e6bc8f;
+
+    /* Fundo */
+    --background: #f5f7fa;
+    --surface: #ffffff;
+
+    /* Texto */
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+
+    /* Estados */
+    --success: #4caf50;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --info: #3b82f6;
+
+    /* Bordas */
+    --border: #e5e7eb;
+
+    /* Sombras */
+    --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    /* Radius */
+    --radius: 10px;
+}
 body {
-  background-image: url(../imagem/backgroud-login.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+    /* background-image: url(../imagem/backgroud-login.jpg); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    background-color: var(--background);
+}
+
+.wrap {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 150px;
+    border-radius: var(--radius);
+    padding: 10px;
+    box-shadow: var(--shadow-medium);
+}
+.wrap img {
+    width: 80px;
+}
+
+.wrap form {
+    padding: 10px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50px;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
