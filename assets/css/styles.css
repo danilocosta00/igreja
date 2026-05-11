@@ -68,3 +68,10 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
 }
+
+.topo {
+    background-color: #e5e7eb;
+    padding-inline: 16px 6px;
+    align-items: center;
+    justify-content: space-between;
+}

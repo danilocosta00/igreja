@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Login</title>
         <link rel="stylesheet" href="assets/css/bootstrap.css" />
         <link rel="stylesheet" href="assets/css/styles.css" />
 
@@ -38,10 +38,15 @@
             var inputSenha = document.getElementById('senha');
             var iconeSenha = document.getElementById('eye-senha');
 
-            //adicionando um evento de click
+            /*verificando se o campo senha tem dados, se nao tiver, nao faz nada*/
             iconeSenha.addEventListener('click', function (e) {
+                if (!inputSenha.value.trim()) {
+                    alert('Preencha os dados');
+                    return;
+                }
+                //adicionando um evento de click
                 // alert('Clicou no icone');
-                if (iconeSenha.classList.contains('bi-eye-slash-fill')) {
+                if (iconeSenha.classList.contains('bi-eye-slash-fill') && inputSenha) {
                     iconeSenha.classList.remove('bi-eye-slash-fill');
                     iconeSenha.classList.add('bi-eye-fill');
                     inputSenha.type = 'text';
