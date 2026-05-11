@@ -21,18 +21,38 @@
                     <div class="mb-3 input-box">
                         <label for="email" class="form-label">Email</label>
 
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="seu email" />
+                        <input type="email" class="form-control" id="email" placeholder="seu email" />
                         <i class="bi bi-person-circle icon-form"></i>
                     </div>
                     <div class="mb-3 input-box">
                         <label for="senha" class="form-label">Senha</label>
                         <input type="password" class="form-control" id="senha" placeholder="sua senha" />
-                        <i class="bi bi-eye-slash icon-form"></i>
+                        <i class="bi bi-eye-slash-fill" id="eye-senha"></i>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%">Logar</button>
                 </form>
             </div>
         </div>
+
+        <script>
+            var inputSenha = document.getElementById('senha');
+            var iconeSenha = document.getElementById('eye-senha');
+
+            //adicionando um evento de click
+            iconeSenha.addEventListener('click', function (e) {
+                // alert('Clicou no icone');
+                if (iconeSenha.classList.contains('bi-eye-slash-fill')) {
+                    iconeSenha.classList.remove('bi-eye-slash-fill');
+                    iconeSenha.classList.add('bi-eye-fill');
+                    inputSenha.type = 'text';
+                } else {
+                    iconeSenha.classList.remove('bi-eye-fill');
+                    iconeSenha.classList.add('bi-eye-slash-fill');
+                    inputSenha.type = 'password';
+                }
+            });
+        </script>
+
         <!--Inport Scripts -->
         <script src="assets/js/jquery-4.0.0.js"></script>
         <script src="assets/js/popper.min.js"></script>
